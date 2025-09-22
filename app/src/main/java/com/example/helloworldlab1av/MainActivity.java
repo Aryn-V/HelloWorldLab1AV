@@ -50,5 +50,4 @@ public class MainActivity extends AppCompatActivity {
     public void ChangeText1(View view) {
         textChanging.setText("The Hello World Text is Changed");
     }
-    //CODE FOR REVERT
 }
