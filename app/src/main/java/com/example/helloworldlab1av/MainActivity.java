@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textChanging;
     Button btnColourChange;
+    Button btnBackgroundChange;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 textChanging.setTextColor(Color.RED);
             }
         });
+        btnBackgroundChange = findViewById(R.id.btnBackgroundChange);
+        btnBackgroundChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textChanging.setBackgroundColor(Color.YELLOW);
+            }
+        });
     }
+    //Test
 
 
     public void ChangeText1(View view) {
