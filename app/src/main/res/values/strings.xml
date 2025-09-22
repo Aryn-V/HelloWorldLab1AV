@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Hello World Lab1AV</string>
     <string name="change_text">Change Text</string>
+    <string name="change_colour">Change Colour</string>
 </resources>

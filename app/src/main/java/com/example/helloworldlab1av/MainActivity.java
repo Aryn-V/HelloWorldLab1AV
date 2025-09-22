@@ -1,7 +1,9 @@
 package com.example.helloworldlab1av;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView textChanging;
+    Button btnColourChange;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +26,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        this.textChanging = findViewById(R.id.textChanging);
+        btnColourChange = findViewById(R.id.btnColourChange);
+        btnColourChange.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                textChanging.setTextColor(Color.RED);
+            }
+        });
     }
 
+
     public void ChangeText1(View view) {
-        TextView textChanging = findViewById(R.id.textChanging);
         textChanging.setText("The Hello World Text is Changed");
     }
 }
